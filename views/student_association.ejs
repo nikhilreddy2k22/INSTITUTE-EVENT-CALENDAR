@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Association </title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="student_association.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="admin">
+              <h4>Associations</h4>
+            </div>
+            <div class="button">
+              <div class="heading-1">
+                  <a href="/association_participated"> <p>Registered Students for an Event</p></a>
+               </div>
+               <div class="heading-1">
+                  <a href="/addassociation_event" ><p>Add Event</p></a>
+               </div>
+               <div class="heading-1">
+                  <a href="/update_association_event" ><p>Update Event</p></a>
+               </div>
+               <div class="heading-1">
+                  <a href="/association_event_data" ><p>Event Data</p></a>
+               </div>
+              <div class="heading-1">
+                  <a href="/association_reg" ><p>Add Association</p></a>
+              </div>
+               <div class="heading-1">
+                  <a href="/update_association" ><p>Update Association</p></a>
+              </div>
+               <div class="heading-1" style="background-color:#374151;" >
+                  <a href="/student_association" ><p> Register Association Member</p></a>
+               </div>
+               <div class="heading-1">
+                  <a href="/update_associationmember" ><p>Update Association Member</p></a>
+                </div>
+                <div class="heading-1">
+                    <a href="/association_member_data" ><p>Association Member Data</p></a>
+                  </div>
+                  <div class="heading-1">
+                    <a href="/adminpage1" ><p>Dashboard</p></a>
+                  </div>
+                  <div class="heading-1">
+                    <a href="/logout" ><p>Logout</p></a>
+                  </div>
+            </div>
+        </div>
+        <div class="wrapper2">
+            <div class="wrapper">
+            <form action="/student_association_post" method="post">
+                <h2 class="title">Add Association Member</h2>
+                <div class="form">
+                    <div class="form-group">
+                        <label for="associationname">Association Name</label><br>
+                        <select class="form-control" name="clubname" placeholder="select club">
+                            <option >CSEA</option>
+                            <option >ECEA</option>
+                            <option >EEA</option>
+                            <option >MEA</option>
+                            <option >MMEA</option>
+                            <option >ChEA</option>
+                            <option >CEA</option> 
+                            <option >BEA</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input class="form-control" type="text" name="name"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="regno">Reg no</label><br>
+                        <input class="form-control" type="text" name="regno"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="rollno">Roll no</label><br>
+                        <input class="form-control" type="text" name="rollno" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label><br>
+                        <input class="form-control" type="text" name="year" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="positiion">Position</label><br>
+                        <input class="form-control" type="text" name="position"   required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label><br>
+                        <input class="form-control" type="email" name="email"   required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactno">Contact no</label><br>
+                        <input class="form-control" type="text" name="contactno"   required />
+                    </div>
+                    <p id="msg1"><%=msg%></p>
+                    <div class="ffp">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+       </div>
+     </div>
+</body>
+</html>

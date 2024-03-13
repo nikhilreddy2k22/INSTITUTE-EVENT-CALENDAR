@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register Student in Club</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="student_club.css">
+</head>
+<body>
+    <div class="main">
+    <div class="sidebar">
+        <div class="admin">
+          <h4>Clubs</h4>
+        </div>
+        <div class="button">
+          <div class="heading-1">
+              <a href="/club participated"> <p>Registered Students for an Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/addclub_event" ><p>Add Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_club_event" ><p>Update Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/event_club_event" ><p>Event Data</p></a>
+           </div>
+          <div class="heading-1">
+              <a href="/club_reg" ><p>Add Club</p></a>
+          </div>
+           <div class="heading-1">
+              <a href="/update_club" ><p>Update Club</p></a>
+          </div>
+           <div class="heading-1" style="background-color:#374151;">
+              <a href="/student_club" ><p>Register Club Member</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_clubmember" ><p> Update Club Member</p></a>
+            </div>
+            <div class="heading-1">
+                <a href="/club_member_data" ><p>  Club Member Data</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/adminpage1" ><p>Dashboard</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/logout" ><p>Logout</p></a>
+              </div>
+        </div>
+    </div>
+    <div class="wrapper2">
+       <div class="wrapper">
+          
+            <form action="/student_club_post" method="post">
+                <h2 class="title">Register</h2>
+                <div class="form">
+                    <div class="form-group">
+                        <label for="clubname">Club Name</label><br>
+                        <select class="form-control" name="clubname" placeholder="select club">
+                            <option >Shilpi</option>
+                            <option >Entrepreneurship and Innovation Cell</option>
+                            <option >Graphi Cafe</option>
+                            <option >Brindavanam</option>
+                            <option >Shresta</option>
+                            <option >praayatnam</option>
+                            <option >Literary and Debate</option> 
+                            <option >Dhwani</option>
+                            <option >Painting and Photography</option>
+                            <option >Nature and Value Education</option>
+                            <option >Physical Education</option>
+                            <option >Task Force</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input class="form-control" type="text" name="name"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="regno">Reg no</label><br>
+                        <input class="form-control" type="text" name="regno"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="rollno">Roll no</label><br>
+                        <input class="form-control" type="text" name="rollno" />
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch</label><br>
+                        <input class="form-control" type="text" name="branch"   required />
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label><br>
+                        <input class="form-control" type="text" name="year"   required />
+                    </div>
+                    <div class="form-group">
+                        <label for="positiion">Position</label><br>
+                        <input class="form-control" type="text" name="position"   required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label><br>
+                        <input class="form-control" type="email" name="email"   required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactno">Contact no</label><br>
+                        <input class="form-control" type="text" name="contactno"   required />
+                    </div>
+                    <p id="msg1"><%=msg%></p>
+                    <div class="ffp">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+         </div>
+       </div>
+    </div>
+
+</body>
+</html>

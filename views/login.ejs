@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="img-nit">
+    <img src="images/logo.png" width="70" height="70">
+ </div>
+  <div class="title">
+    Admin
+  </div>
+  <form action="/login" method="post">
+  <div class="form" >
+    <div class="input_field">
+      <input type="text" placeholder="Username" name="username" class="input" required>
+      <i class="fas fa-user"></i>
+    </div>
+    
+    <div class="input_field">
+      <input type="password" placeholder="Password" name="password" class="input" required>
+      <i class="fas fa-lock"></i>
+    </div>
+   
+    <p id="pk"><%= name %></p>
+    <div class="fff">
+      <button class="btn" type="submit">Login</button>
+    </div>
+
+  </div>
+  </form>
+</div>	
+<script>
+  //  <ontent = xhr.responseText;
+  
+</script>
+</body>
+</html>

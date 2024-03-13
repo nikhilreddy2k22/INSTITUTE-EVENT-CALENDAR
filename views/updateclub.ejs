@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<title>Update Club </title>
+    <link rel="stylesheet" href="updateclubevent.css">
+  </head>
+  <body>
+    <div class="main">
+    <div class="sidebar">
+        <div class="admin">
+          <h4>Clubs</h4>
+        </div>
+        <div class="button">
+          <div class="heading-1">
+              <a href="/club_participated"> <p>Registered Students for an Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/addclub_event" ><p>Add Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_club_event" ><p>Update Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/event_club_data" ><p>Event Data</p></a>
+           </div>
+          <div class="heading-1">
+              <a href="/club_reg" ><p>Add Club</p></a>
+          </div>
+           <div class="heading-1" style="background-color:#374151;">
+              <a href="/update_club" ><p>Update Club</p></a>
+          </div>
+           <div class="heading-1">
+              <a href="/student_club" ><p> Register Club Member</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_clubmember" ><p> Update Club Member</p></a>
+            </div>
+            <div class="heading-1">
+                <a href="/club_member_data" ><p>  Club Member Data</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/adminpage1" ><p>Dashboard</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/logout" ><p>Logout</p></a>
+              </div>
+        </div>
+    </div>
+    <div class="wrapper2">
+    
+        <div class="heading">
+        <h3>Update Club</h3>
+        </div>
+        <form action="/update_search_club" method="post">
+        <div class="primary">
+            <div class="form-group">
+                <label for="clubname">Club Name</label><br>
+                <select class="form-control" name="clubname" placeholder="select club">
+                    <option >Shilpi</option>
+                    <option >Entrepreneurship and Innovation Cell</option>
+                    <option >Graphi Cafe</option>
+                    <option >Brindavanam</option>
+                    <option >Shresta</option>
+                    <option >praayatnam</option>
+                    <option >Literary and Debate</option> 
+                    <option >Dhwani</option>
+                    <option >Painting and Photography</option>
+                    <option >Nature and Value Education</option>
+                    <option >Physical Education</option>
+                    <option >Task Force</option>
+              </select>
+            </div>
+            <div class="ffp form-group">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </div>
+        </form>
+    
+        <%if(condition){%>
+        <div class="update-form">
+          
+            <div class="wrapper">
+                <form action="/update_club_post/<%=users.name%>" method="post">
+                <div class="heading1">
+                    <h2>Update  Club</h2>
+                </div>
+              <div class="wrap-sec">
+                <div class=" update-group">
+                    <h4>Club Name</h4>
+                    <p><%= users.name %></p>
+                </div>
+                
+                <div class="update-group ">
+                    <label for="email">Email</label><br>
+                    <input class="group-control" type="email" id="email" name="email"  value="<%=users.email %>"   />
+                </div>
+                <br>
+                <div class="update-group update-group-1">
+                    <label for="incharge">Incharge</label><br>
+                    <input class="group-control" type="text"  name="incharge"  value="<%=users.incharge %>" />
+                </div>
+            </div>
+                <div class="ffp form-group">
+                    <button class="btn" type="submit">Update</button>
+                </div>
+               </form>
+               <form action="delete_club/<%=users.name%>" method="get">
+                <p class="mid">-------------- or -----------------</p>
+                <div class="ffp form-group">
+                    <button class="btn" type="submit">Delete</button>
+                </div>
+              </form>
+            </div>
+     </div>
+     <%}%>
+   <p id="msg-1"><%=msg%></p>
+    </div>
+    <script>
+       
+    </script>
+  </body>
+</html>

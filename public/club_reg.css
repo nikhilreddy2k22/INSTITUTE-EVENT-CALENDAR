@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+
+  text-decoration: none;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+
+  body{
+    /* display:flex;
+    align-items:center;
+    justify-content:center; */
+    background-color:#fff;
+    /* background:black; */
+    /* padding-top:5%;
+    padding-bottom:40px; */
+  }
+.main{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.main .sidebar{
+  width:16%;
+  height:100vh;
+  color:#fff;
+  font-family:none;
+}
+
+.sidebar .admin{
+  background-color:#111827;
+  padding:20px 20px;
+ 
+}
+
+.sidebar .button{
+   background-color:rgba(31,41,55);
+  /* background-color:#374151; */
+  color:#D1D5DF;
+   height:100vh; 
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.sidebar .button .heading{
+  font-size:16px;
+  
+}
+.sidebar .button .heading p{
+  padding:10px 20px;
+  font-weight:500;
+  line-height:1.5em;
+  color:#D1D5DF;
+}
+.sidebar .button .heading p{
+  text-decoration:none;
+}
+
+.sidebar .button .heading :hover{
+  background-color:#374151;
+}
+.primary{
+  padding-top:5%;
+  padding-bottom:40px;
+  width:84%;
+  display:flex;
+  align-items:center;
+  justify-content:center; 
+}
+.wrapper{
+    box-shadow:rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    width: 300px;
+    /* width: 100%; */
+    height: auto;
+    background: #fff;
+    padding: 60px 45px;
+    overflow:hidden;
+   
+    border-radius: 20px;
+  }
+  .wrapper .title{
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	margin-bottom: 23px;
+    text-align: center;
+   font-size: 26px;
+   font-weight: bold;
+}
+  .wrapper .form .form-group{
+    margin-bottom:15px;
+  }
+  label{
+    margin-bottom:10px;
+    color: #475569;
+  }
+
+  .wrapper .form .form-group .form-control{
+    margin-top:5px;
+    margin-bottom:5px;
+    height:25px;
+    width:100%;
+    border-style:none none solid none;
+    border-bottom-width:1px;
+    
+  }
+  .wrapper .form .ffp{
+    text-align:center;
+  }
+  .wrapper .form .btn{
+    width: 70%;
+    margin: 20px auto 0;
+    background-color :#4267B2;
+    color: rgba(256,256,256,0.7);
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px;
+    color:#fff;
+    
+    border-style:none;
+  }
+  

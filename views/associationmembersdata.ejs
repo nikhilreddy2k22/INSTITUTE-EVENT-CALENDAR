@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<title>Event data</title>
+    <link rel="stylesheet" href="event_club_data.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+          <div class="admin">
+            <h4>Associations</h4>
+          </div>
+          <div class="button">
+            <div class="heading1">
+                <a href="/association_participated"> <p>Registered Students for an Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/association_event" ><p>Add Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/update_association_event" ><p>Update Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/association_event_data" ><p>Event Data</p></a>
+             </div>
+            <div class="heading1">
+                <a href="/association_reg" ><p>Add Association</p></a>
+            </div>
+             <div class="heading1">
+                <a href="/update_association" ><p>Update Association</p></a>
+            </div>
+             <div class="heading1">
+                <a href="/student_association" ><p>Register Association Members </p></a>
+             </div>
+             <div class="heading1">
+                <a href="/update_associationmember" ><p>Update Association Members </p></a>
+              </div>
+              <div class="heading1" style=" background-color:#374151;">
+                <a href="/association_member_data" ><p> Association Members data </p></a>
+              </div>
+              <div class="heading1">
+                <a href="/adminpage1" ><p>Dashboard</p></a>
+              </div>
+              <div class="heading1">
+                <a href="/logout" ><p>Logout</p></a>
+              </div>
+          </div>
+      </div>
+      <div class="wrapper">
+      
+        <div class="heading">
+        <h3>Search Association Members</h3>
+        </div>
+        <form action="/association_member_data_post" method="post">
+        <div class="primary">
+            <div class="form-group">
+                <label for="associationname">Association Name</label><br>
+                <select class="form-control" name="associationname" placeholder="select association">
+                    <option >Select Association</option>
+                    <option >CSEA</option>
+                    <option >ECEA</option>
+                    <option >EEA</option>
+                    <option >MEA</option>
+                    <option >MMEA</option>
+                    <option >ChEA</option>
+                    <option >CEA</option> 
+                    <option >BEA</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="regno">Regno</label><br>
+                <input class="form-control" type="text" name="regno"  />
+            </div>
+            <div class="ffp form-group">
+                <button class="btn" type="submit">Search</button>
+            </div>
+        </div>
+        </form>
+    <div class="table">
+    <table>
+      <%if(condition){%>
+      <thead>
+        <tr class="table-heading">
+          <th class="col-1">S.No</th>
+          <th class="col-6">Association Name</th>
+          <th class="col-6">Name</th>
+          <th class="col-3">Regno</th>
+          <th class="col-3">Rollno</th>
+          <th class="col-1">Year</th>
+          <th class="col-3">position</th>
+          <th class="col-4">Email</th>
+          <th class="col-5">Contact</th>
+     
+        </tr>
+       </thead>
+       <tbody>
+            <% var count = 1; %>
+          <% users.forEach(user => { %>
+          <tr>
+            <td class="col-1"><%= count++ %></td>
+            <td class="col-6"><%= user.association %></td>
+            <td class="col-6"><%= user.name %></td>
+            <td class="col-3"><%= user.regno %></td>
+            <td class="col-3"><%= user.rollno %></td>
+            <td class="col-1"><%= user.year %></td>
+            <td class="col-1"><%= user.position %></td>
+            <td class="col-5"><%= user.email %></td>
+            <td class="col-4"><%= user.contact %></td>
+          </tr>
+         <% }); %>
+        
+      </tbody>
+      <%}%>
+   </table>
+   <p id="msg-1"><%=msg%></p>
+   </div>
+  </div>
+  </div>
+    
+  </body>
+</html>

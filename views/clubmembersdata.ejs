@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<title>Club Members data</title>
+    <link rel="stylesheet" href="event_club_data.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+          <div class="admin">
+            <h4>Clubs</h4>
+          </div>
+          <div class="button">
+            <div class="heading1">
+                <a href="/club_participated"> <p>Registered Students for an Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/addclub_event" ><p>Add Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/update_club_event" ><p>Update Event</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/event_club_data" ><p>Event Data</p></a>
+             </div>
+            <div class="heading1">
+                <a href="/club_reg" ><p>Add Club</p></a>
+            </div>
+             <div class="heading1">
+                <a href="/update_club" ><p>Update Club</p></a>
+            </div>
+             <div class="heading1">
+                <a href="/student_club" ><p> Register Club Member</p></a>
+             </div>
+             <div class="heading1">
+                <a href="/update_clubmember" ><p>Update Club Member</p></a>
+              </div>
+              <div class="heading1" style=" background-color:#374151;">
+                <a href="/club_member_data" ><p>Club Member Data</p></a>
+              </div>
+              <div class="heading1">
+                <a href="/adminpage1" ><p>Dashboard</p></a>
+              </div>
+              <div class="heading1">
+                <a href="/logout" ><p>Logout</p></a>
+              </div>
+          </div>
+      </div>
+      <div class="wrapper">
+      
+        <div class="heading">
+        <h3>Search Club Members</h3>
+        </div>
+        <form action="/club_member_data_post" method="post">
+        <div class="primary">
+            <div class="form-group">
+                <label for="clubname">Club Name</label><br>
+                <select class="form-control" name="clubname" placeholder="select club">
+                    <option >Select Club</option>
+                    <option >Shilpi</option>
+                    <option >Entrepreneurship and Innovation Cell</option>
+                    <option >Graphi Cafe</option>
+                    <option >Brindavanam</option>
+                    <option >Shresta</option>
+                    <option >praayatnam</option>
+                    <option >Literary and Debate</option> 
+                    <option >Dhwani</option>
+                    <option >Painting and Photography</option>
+                    <option >Nature and Value Education</option>
+                    <option >Physical Education</option>
+                    <option >Task Force</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="regno">Regno</label><br>
+                <input class="form-control" type="text" name="regno"  />
+            </div>
+            <div class="ffp form-group">
+                <button class="btn" type="submit">Search</button>
+            </div>
+        </div>
+        </form>
+    <div class="table">
+    <table>
+      <%if(condition){%>
+      <thead>
+        <tr class="table-heading">
+          <th class="col-1">S.No</th>
+          <th class="col-2">Club Name</th>
+          <th class="col-2">Name</th>
+          <th class="col-3">Regno</th>
+          <th class="col-3">Rollno</th>
+          <th class="col-3">Branch</th>
+          <th class="col-1">Year</th>
+          <th class="col-3">Position</th>
+          <th class="col-4">Email</th>
+          <th class="col-5">Contact</th>
+     
+        </tr>
+       </thead>
+       <tbody>
+            <% var count = 1; %>
+          <% users.forEach(user => { %>
+          <tr>
+            <td class="col-1"><%= count++ %></td>
+            <td class="col-2"><%= user.clubname %></td>
+            <td class="col-2"><%= user.name %></td>
+            <td class="col-3"><%= user.regno %></td>
+            <td class="col-3"><%= user.rollno %></td>
+            <td class="col-3"><%= user.branch %></td>
+            <td class="col-1"><%= user.year %></td>
+            <td class="col-1"><%= user.position %></td>
+            <td class="col-5"><%= user.email %></td>
+            <td class="col-4"><%= user.contact %></td>
+          </tr>
+         <% }); %>
+        
+      </tbody>
+      <%}%>
+   </table>
+   <p id="msg-1"><%=msg%></p>
+   </div>
+  </div>
+  </div>
+    
+  </body>
+</html>

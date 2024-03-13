@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<title>Add Event of club</title>
+    <link rel="stylesheet" href="addclub_event.css">
+  </head>
+  <body>
+    
+    <div class="main">
+        <div class="sidebar">
+            <div class="admin">
+              <h4>Clubs</h4>
+            </div>
+            <div class="button">
+              <div class="heading1">
+                  <a href="/club_participated"> <p>Registered Students for an Event</p></a>
+               </div>
+               <div class="heading1" style="background-color:#374151;">
+                  <a href="/addclub_event" ><p>Add Event</p></a>
+               </div>
+               <div class="heading1">
+                  <a href="/update_club_event" ><p>Update Event</p></a>
+               </div>
+               <div class="heading1">
+                  <a href="/event_club_data" ><p>Event Data</p></a>
+               </div>
+              <div class="heading1">
+                  <a href="/club_reg" ><p>Add Club</p></a>
+              </div>
+               <div class="heading1">
+                  <a href="/update_club" ><p>Update Club</p></a>
+              </div>
+               <div class="heading1">
+                  <a href="/student_club" ><p>Register Club Member </p></a>
+               </div>
+               <div class="heading1">
+                  <a href="/update_clubmember" ><p> Update Club Member</p></a>
+                </div>
+                <div class="heading1">
+                  <a href="/club_memeber_data" ><p> Club Member Data</p></a>
+                </div>
+                <div class="heading1">
+                  <a href="/adminpage1" ><p>Dashboard</p></a>
+                </div>
+                <div class="heading1">
+                  <a href="/logout" ><p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+        
+        <form action="/addclub_event_post" method="post">
+        <div class="primary">
+            <div class="heading">
+                <h2>Add Event</h2>
+            </div>
+          <div class="secondary">
+            <div class="form-group">
+                <label for="clubname">Club Name</label><br>
+                <select class="form-control" name="clubname" placeholder="select club">
+                    <option >Shilpi</option>
+                    <option >Entrepreneurship and Innovation Cell</option>
+                    <option >Graphi Cafe</option>
+                    <option >Brindavanam</option>
+                    <option >Shresta</option>
+                    <option >Praayatnam</option>
+                    <option >Literary and Debate</option> 
+                    <option >Dhwani</option>
+                    <option >Painting and Photography</option>
+                    <option >Nature and Value Education</option>
+                    <option >Physical Education</option>
+                    <option >Task Force</option>
+              </select>
+            </div>
+            <div class="form-group form-group-1">
+                <label for="event">Event Name</label><br>
+                <input class="form-control" type="text" name="event"  required />
+            </div>
+            <div class="form-group form-group-1">
+                <label for="date">Date</label><br>
+                <input class="form-control" type="date" id="date" name="date"  required/>
+            </div>
+            <div class="form-group form-group-1">
+                <label for="form">From</label><br>
+                <input class="form-control" type="time"  name="from" step="60" placeholder="12:00 am" required />
+            </div>
+            <div class="form-group form-group-1">
+                <label for="to">To</label><br>
+                <input class="form-control" type="time" name="to"  step="60" placeholder="12:00 am"required />
+            </div>
+            <div class="form-group form-group-1">
+                <label for="venue">Venue</label><br>
+                <input class="form-control " type="text" name="venue"  required />
+            </div>
+            <br>
+            <div class="form-group form-group-1">
+                <label for="guest">Guest Speaker</label><br>
+                <input class="form-control " type="text" name="guest"/>
+            </div>
+            <div class="form-group form-group-1">
+              <label for="image">Image Path</label><br>
+              <input class="form-control " type="text" name="image"/>
+          </div>
+        </div>
+           <div class="form-group form-group-2">
+            <label for="description">Description(upto 50 words)</label><br>
+            <textarea class="form-control-1 " name="description" rows="4" maxlength="350" placeholder="enter description upto 50 words" required ></textarea>
+          </div>
+            <div class="ffp form-group">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </div>
+        </form>
+      </div>
+      </div>
+    <script>
+        
+        function formatDate(input) {
+           var date = new Date(input.value);
+              if (!isNaN(date.getTime())) {
+              var day = date.getDate().toString().padStart(2, '0');
+             var month = (date.getMonth() + 1).toString().padStart(2, '0');
+               var year = date.getFullYear();
+            var formattedDate = year + '-' + month + '-' + day;
+            input.value = formattedDate;
+          }
+       }
+       function convertTime(input) {
+         var time = input.value.split(':');
+         var hours = parseInt(time[0]);
+         var minutes = time[1];
+         var suffix = hours >= 12 ? 'PM' : 'AM';
+         hours = ((hours + 11) % 12 + 1);
+          input.value = hours + ':' + minutes + ' ' + suffix;
+      }
+
+    </script>
+  </body>
+</html>

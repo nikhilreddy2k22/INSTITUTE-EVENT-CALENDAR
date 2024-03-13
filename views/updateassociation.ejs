@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<title>Update Association</title>
+    <link rel="stylesheet" href="updateclubevent.css">
+  </head>
+  <body>
+    <div class="main">
+    <div class="sidebar">
+        <div class="admin">
+          <h4>Associations</h4>
+        </div>
+        <div class="button">
+          <div class="heading-1">
+              <a href="/association_participated"> <p>Registered Students for an Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/addassociation_event" ><p>Add Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_association_event" ><p>Update Event</p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/association_event_data" ><p>Event Data</p></a>
+           </div>
+          <div class="heading-1">
+              <a href="/association_reg" ><p>Add Association</p></a>
+          </div>
+           <div class="heading-1" style="background-color:#374151;">
+              <a href="/update_association" ><p>Update Association</p></a>
+          </div>
+           <div class="heading-1">
+              <a href="/student_association" ><p>Register Association Member </p></a>
+           </div>
+           <div class="heading-1">
+              <a href="/update_associationmember" ><p>Update Association Member </p></a>
+            </div>
+            <div class="heading-1">
+                <a href="/association_member_data" ><p>Association Member Data</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/adminpage1" ><p>Dashboard</p></a>
+              </div>
+              <div class="heading-1">
+                <a href="/logout" ><p>Logout</p></a>
+              </div>
+        </div>
+    </div>
+    <div class="wrapper2">
+    
+        <div class="heading">
+        <h3>Update Association</h3>
+        </div>
+        <form action="/update_search_association" method="post">
+        <div class="primary">
+            <div class="form-group">
+                <label for="associationname">Association Name</label><br>
+                <select class="form-control form-control-association" name="associationname" placeholder="select club">
+                    <option >CSEA</option>
+                    <option >ECEA</option>
+                    <option >EEA</option>
+                    <option >MEA</option>
+                    <option >MMEA</option>
+                    <option >ChEA</option>
+                    <option >CEA</option> 
+                    <option >BEA</option>
+              </select>
+            </div>
+            <div class="ffp form-group">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </div>
+        </form>
+    
+        <%if(condition){%>
+        <div class="update-form">
+          
+            <div class="wrapper">
+                <form action="/update_association_post/<%=users.name%>" method="post">
+                <div class="heading1">
+                    <h2>Update  Association</h2>
+                </div>
+              <div class="wrap-sec">
+                <div class=" update-group">
+                    <h4>Association Name</h4>
+                    <p><%= users.name %></p>
+                </div>
+                
+                <div class="update-group ">
+                    <label for="email">Email</label><br>
+                    <input class="group-control" type="email" id="email" name="email"  value="<%=users.email %>"   />
+                </div>
+                <br>
+                <div class="update-group update-group-1">
+                    <label for="incharge">Incharge</label><br>
+                    <input class="group-control" type="text"  name="incharge"  value="<%=users.incharge %>" />
+                </div>
+            </div>
+                <div class="ffp form-group">
+                    <button class="btn" type="submit">Update</button>
+                </div>
+               </form>
+               <form action="delete_association/<%=users.name%>" method="get">
+                <p class="mid">-------------- or -----------------</p>
+                <div class="ffp form-group">
+                    <button class="btn" type="submit">Delete</button>
+                </div>
+              </form>
+            </div>
+     </div>
+     <%}%>
+   <p id="msg-1"><%=msg%></p>
+    </div>
+    <script>
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+ 
+  text-decoration: none;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+/* body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#fff;
+    /* background:black; */
+   /* padding-top:5%;
+    padding-bottom:40px;
+    
+  } */
+  body{
+   
+    background-color:#fff;
+    
+  }
+.main{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.main .sidebar{
+  width:16%;
+  height:100vh;
+  color:#fff;
+  font-family:none;
+}
+
+.sidebar .admin{
+  background-color:#111827;
+  padding:20px 20px;
+ 
+}
+
+.sidebar .button{
+   background-color:rgba(31,41,55);
+  /* background-color:#374151; */
+  color:#D1D5DF;
+   height:100vh; 
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.sidebar .button .heading1{
+  font-size:16px;
+  
+}
+.sidebar .button .heading1 p{
+  padding:10px 20px;
+  font-weight:500;
+  line-height:1.5em;
+  color:#D1D5DF;
+}
+.sidebar .button .heading1 p{
+  text-decoration:none;
+}
+
+.sidebar .button .heading1 :hover{
+  background-color:#374151;
+}
+.wrapper{
+  padding-top:5%;
+  padding-bottom:40px;
+  width:84%;
+  display:flex;
+  align-items:center;
+  justify-content:center; 
+}
+ .heading{
+    text-align:center;
+    margin-bottom:14px;
+}
+.primary{
+    justify-content:center;
+    box-shadow:rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    max-width:500px;
+    padding-top:70px;
+     padding-bottom:50px;
+    padding-left:30px;
+    padding-right:30px;
+    /* border-style:solid;
+    border-width:1px; */
+    overflow:hidden;
+    height:auto;
+    border-radius: 30px;
+}
+.secondary{
+    display:flex;
+     flex-wrap:wrap;
+     /* justify-content:space-between; */
+}
+.primary .form-group{
+    margin:3%;
+}
+.primary .form-group label{
+    font-weight:560;
+}
+.primary .secondary .form-control{
+    padding:2%;
+    margin-top:8px;
+    height:35px;
+    border-width:1px;
+    border-radius:4px;
+    width:100%;
+}
+.primary .secondary .form-group-1{
+    width:43%;
+}
+.primary  .form-group .form-control-1{
+   
+    padding:2%;
+    margin:0;
+    height:75px;
+    border-width:1px;
+    border-radius:4px;
+    width:100%;
+    margin-top:8px;
+}
+.primary  .form-group-2{
+    width:100%;
+    
+}
+
+form .primary  .ffp{
+    text-align:center;
+    margin-bottom:5px;
+}
+form .primary  .btn{
+    width: 50%;
+    margin: 20px auto 0;
+    background-color :#4267B2;
+    color: rgba(256,256,256,0.7);
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px;
+    color:#fff;
+    
+    border-style:none;
+  }
+
+ 
+  
+  
+
+  

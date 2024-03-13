@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="/reg_style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+       
+        <div>
+        <h2 class="title">Register Here</h2>
+        </div>
+        <div class="form">
+              <form action="/regclub_post/<%=club%>/<%=event%>/<%=date%>" method="post">
+                <div class="input_field">
+                    <input type="email" class="input" name="email" placeholder="Email" required/>
+                </div>
+                <div class="input_field">
+                    <input type="text" class="input" name="name" placeholder="Enter Name" required/>
+                </div>
+                <div class="input_field">
+                    <input type="text" class="input" name="regno" placeholder="Enter Regno" required/>
+                </div>
+                <div class="input_field">
+                    <input type="text" class="input" name="rollno" placeholder="Enter Rollno"/>
+                </div>
+                <div class="input_field">
+                    <!-- <input type="text" class="input" placeholder="Select Course" /> -->
+                    <select class="input" name="course">
+                        <option value="Select Course" id="branch">Select Course</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="phd">Phd</option>
+                  </select>
+                </div>
+                <div class="input_field">
+                    <!-- <input type="text" class="input" name="year" placeholder="Select Year" /> -->
+                    <select class="input" name="year">
+                        <option value="Select Year" id="branch">Select Year</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                  </select>
+                </div>
+                <div class="input_field">
+                    <!-- <input type="text" class="input" name="branch" placeholder="Select Branch" /> -->
+                    <select class="input" name="branch" placeholder="select Branch">
+                        <option value="Select Branch" id="branch" >Select Branch</option>
+                        <option value="cse">CSE</option>
+                        <option value="mech">ECE</option>
+                        <option value="eee">EEE</option>
+                        <option value="mech">MECH</option>
+                        <option value="civil">CIVIL</option>
+                        <option value="chemical">CHEMICAL</option> 
+                        <option value="mme">MME</option>
+                        <option value="bio">BIOTECH</option>
+                  </select>
+                </div>
+                <div class="input_field">
+                    <input type="text" class="input" name="contact" placeholder="contact number" required/>
+                </div>
+                <p id="msg1"><%=msg%></p>
+                <div class="fff">
+                    <button class="btn" type="submit">Submit</button>
+                    
+                </div>
+              </form>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add Club </title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="club_reg.css">
+</head>
+<body>
+   <section>
+    <div class="main">
+        <div class="sidebar">
+            <div class="admin">
+              <h4>Clubs</h4>
+            </div>
+            <div class="button">
+              <div class="heading">
+                  <a href="/club_participated"> <p>Registered Students for an Event</p></a>
+               </div>
+               <div class="heading">
+                  <a href="/addclub_event" ><p>Add Event</p></a>
+               </div>
+               <div class="heading">
+                  <a href="/update_club_event" ><p>Update Event</p></a>
+               </div>
+               <div class="heading">
+                  <a href="/event_club_data" ><p>Event Data</p></a>
+               </div>
+              <div class="heading" style="background-color:#374151;">
+                  <a href="/club_reg" ><p>Add Club</p></a>
+              </div>
+               <div class="heading">
+                  <a href="/update_club" ><p>Update Club</p></a>
+              </div>
+               <div class="heading">
+                  <a href="/student_club" ><p> Register Club Member</p></a>
+               </div>
+               <div class="heading">
+                  <a href="/update_clubmember" ><p> Update Club Member</p></a>
+                </div>
+                <div class="heading">
+                    <a href="/club_member_data" ><p>Club Member Data</p></a>
+                  </div>
+                  <div class="heading">
+                    <a href="/adminpage1" ><p>Dashboard</p></a>
+                  </div>
+                  <div class="heading">
+                    <a href="/logout" ><p>Logout</p></a>
+                  </div>
+            </div>
+        </div>
+        <div class="primary">
+       <div class="wrapper">
+          <div>
+            <form action="/club_post" method="post">
+                <h2 class="title">Add Club</h2>
+                <div class="form">
+                    <div class="form-group">
+                        <label for="name">Club Name</label><br>
+                        <input class="form-control" type="text" name="clubname" id="name"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label><br>
+                        <input class="form-control" type="email" name="email" id="email"   />
+                    </div>
+                    <div class="form-group">
+                        <label class="lab" for="name">Incharge Name</label><br>
+                        <input class="form-control" type="text" name="name" id="incharge"   />
+                    </div>
+                    <div class="ffp">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+       </div>
+       </div>
+    </div>
+   </section>
+</body>
+</html

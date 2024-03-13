@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/*clubs*/
+
+#club{
+    /* background-color:#e5e9ed; */
+    background-color:#759690ed;
+    padding:2%;
+}
+.wrapper{
+    box-sizing:border-box;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.wrapper .mar .card .name{
+/*     
+    line-height:1.3;
+    font-size:28px;
+    font-weight:600; */
+     
+    line-height:1.3;
+    font-size:22px;
+    font-weight:900;
+    color: #6c757d;
+
+}
+
+.img-circle{
+    border-radius:50%;
+    height:120px;
+    width:120px;
+    padding:3%;
+    margin-bottom:10px;
+}
+
+
+.mar .card{
+    /*font-family:helvetica nueue,Arial,Verdana,sans-serif;*/
+    border-radius:10px;
+    align-items:center;
+    text-align:center;
+    padding:2%;
+    width:100%;
+    height:430px;
+    position:relative;
+    /*font-family: 'Josefin Sans', sans-serif;*/
+}
+.card:hover{
+    transform:scale(1.05);
+}
+.card .text-center{
+   
+    line-height:1.5rem;
+    font-size:18px;
+    max-width:260px;
+   
+    color: #999999;
+}
+
+
+.icon-container{
+    
+   position:absolute;
+   bottom:0px;
+}
+.iconstyle{
+   margin:10px 4px;
+    color:deepskyblue;
+    text-decoration:none;
+   
+}
+.image-pr{
+    height:100px;
+    width:100px;
+}
+.wrapper .mar{
+    
+    width:33%;
+    padding:5px 12px;
+    margin-bottom:25px;
+}
+@media screen and (max-width: 900px){
+	.wrapper .mar{
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 700px){
+	.wrapper .mar{
+		width: 100%;
+	}
+	
+}
+
+
